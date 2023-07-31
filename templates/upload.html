@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Upload your document here {% endblock %}</h1>
+<form action = '/' method = "POST" 
+    enctype = "multipart/form-data">
+    <div>
+        <input type = "file" name = "file" />
+    </div>
+    <br>
+    <div class="checkbox">
+        
+          <input type="checkbox" id="chk",name='check',value="check"/> Additional File for answer? 
+       
+     </div>
+     <br>
+     <div class="form-group" id="file-input" style="display:none;">
+    
+       <input type="file" name="answerFile">
+       <p class="help-block">*Please upload your answer file here</p>
+     </div>
+     <script>
+     document.getElementById('chk').onchange = function(){
+        if(this.checked) {document.getElementById('file-input').style.display='block';
+        //more js statements
+        }
+        else {document.getElementById('file-input').style.display='none';
+        //more js statements
+        }
+     }
+     </script>
+    <div>
+        <label for="module"><h2>Modules</h2></label>
+        <select name="module" id="module">
+            {% for module in modules %}
+                <option value={{module}}>{{module}}</option>
+                {% endfor %}
+          </select>
+    </div>
+    <br>
+    <input type = "submit"/>
+</form>
+{% endblock %}

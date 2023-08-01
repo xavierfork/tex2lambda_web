@@ -1,0 +1,133 @@
+
+body{
+    background-color:#f3f6f7;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    color:white;
+    font-family: 'Roboto', serif;
+    text-align:center;
+    text-decoration: none;
+    padding: 0.8%;
+    background-color: #0099c4;
+    font-size:1.3vw;
+    transition:1s;
+}
+
+
+.content{
+    border-radius: 25px;
+    background: rgba(255,255,255,255);
+    padding: 2%;
+    margin: auto;
+    max-width: 55%;
+    margin-top:8%;
+    transition:1s;
+    
+}
+
+h2{
+    margin-top: 4%;
+    text-align:center;
+    font-family: 'Roboto', serif;
+    font-weight: 600;
+    font-size:2.1vw;
+    transition:1s;
+    color:#0582a5 ;
+}
+
+
+input[type="file"]{
+    margin-top: 6%;
+    font-size: 1.7vw;
+    font-family: 'Roboto', serif;
+    font-weight:200;
+}
+
+
+input[type="file"]::file-selector-button {
+    border: 0.5% solid black ;
+    padding: 0.2em 0.4em;
+    border-radius: 1em;
+    background-color:#f2f6f7;
+    transition: 1s;
+    font-size: 1.4vw;
+    font-family: 'Roboto', serif;
+    font-weight:200;
+  }
+  
+input[type="file"]::file-selector-button:hover {
+    background-color: #bdbdbd ;
+    border: 0.5% solid black;
+  }
+
+.select-file{
+    max-width:100%;
+    margin: auto;
+    
+}
+.select-module{
+    margin: auto;
+    max-width: 15%;
+}
+#module{
+    margin-top:25%;
+    border-radius:0.5em;
+    text-align:center;
+    font-size:1.7vw;
+    font-family: 'Roboto', serif;
+    font-weight:200;
+    background-color:#f3f6f7;
+    padding: 0.5em,1em;
+
+    transition:1s;
+    
+}
+
+.help-block{
+    font-family: 'Roboto', serif;
+    font-weight:200;
+    font-size:1.7vw;
+    transition:1s ease-in-out;
+}
+.chkLabel{
+    font-family: 'Roboto', serif;
+    font-weight:200;
+    font-size:1.7vw;
+    transition:1s
+
+}
+
+input[type=submit] {
+    width: 100%;
+    margin-top: 5%;
+    background-color: #83c8ea;
+    color: black;
+    padding: 10px ;
+    border: none;
+    border-radius: 1em;
+    font-size: 1.4vw;
+    font-family: 'Roboto', serif;
+    font-weight:200;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #0099c4;
+  }
+  
+
+
+
+
+
+ 
+
+  
+ 

@@ -1,43 +1,43 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{% block title %} Upload your document here {% endblock %}</h1>
+<h2>{% block title %} Upload your document here {% endblock %}</h2>
 <form action = '/' method = "POST" 
     enctype = "multipart/form-data">
-    <div>
-        <input type = "file" name = "file" />
-    </div>
-    <br>
-    <div class="checkbox">
+    <div class="select-file">
+        <div class="main_file" >
+            <input type = "file" name = "file" /><span><label class="chkLabel" for="chk"  >
+                <input  type="checkbox" id="chk" name='check' value="check"/> Additional Answer File  </label></span>
+        </div>
         
-          <input type="checkbox" id="chk",name='check',value="check"/> Additional File for answer? 
-       
-     </div>
-     <br>
-     <div class="form-group" id="file-input" style="display:none;">
-    
-       <input type="file" name="answerFile">
-       <p class="help-block">*Please upload your answer file here</p>
-     </div>
-     <script>
-     document.getElementById('chk').onchange = function(){
-        if(this.checked) {document.getElementById('file-input').style.display='block';
-        //more js statements
-        }
-        else {document.getElementById('file-input').style.display='none';
-        //more js statements
-        }
-     }
+        <div class="answer" id="file-input" style="display:none;">
+            <br>
+            <p class="help-block"><strong>*Please upload your answer file here</strong></p>
+            <input type="file" name="answerFile">
+        </div>
+        <script>
+            document.getElementById('chk').onchange = function(){
+            if(this.checked) {document.getElementById('file-input').style.display='block';
+            //more js statements
+            }
+            else {document.getElementById('file-input').style.display='none';
+            //more js statements
+            }
+            }
      </script>
-    <div>
+    </div>
+    <div class="module">
         <label for="module"><h2>Modules</h2></label>
-        <select name="module" id="module">
+        <div class="select-module">
+        <select class="select" name="module" id="module">
             {% for module in modules %}
                 <option value={{module}}>{{module}}</option>
                 {% endfor %}
           </select>
+        </div>
     </div>
     <br>
+    <div class="submit_button">
     <input type = "submit"/>
 </form>
 {% endblock %}

@@ -39,5 +39,14 @@
     <br>
     <div class="submit_button">
     <input type = "submit"/>
+    {% if error %}
+        
+        <script>
+            var errortext='{{error}}';
+            alert(errortext);
+        </script>
+        {% endif %}
+    
+    
 </form>
 {% endblock %}

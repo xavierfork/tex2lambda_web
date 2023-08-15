@@ -4,10 +4,10 @@ version = "0.1.0"
 description = ""
 authors = ["Xavier"]
 readme = "README.md"
-packages = [{include = "web_app"}]
+
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 flask = "^2.3.2"
 tex2lambda = { git = "https://github.com/lambda-feedback/content-conversion"}
 

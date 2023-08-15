@@ -32,7 +32,7 @@ def upload_file():
             app.logger.info('No file is uploaded')
             error='Please upload a file!'
         else:
-            if fnmatch.fnmatch(str(f),pattern):
+            if fnmatch.fnmatch(str(f.filename),pattern):
                 f.save(secure_filename(f.filename))
                 #Decide on whhich filter to use
                 chosenindex=modules.index(request.form['module'])
@@ -57,7 +57,9 @@ def upload_file():
                 #delete files
                 shutil.rmtree(path)
                 os.remove(f.filename)
-                os.remove(answer.filename)
+                if answer:
+                    os.remove(answer.filename)
+                
                 #setup temporary file to remove file after download
                 cache = tempfile.NamedTemporaryFile()
                 with open("Output.zip", 'rb') as fp:
@@ -67,7 +69,8 @@ def upload_file():
                 os.remove("Output.zip")
                 return send_file(cache, as_attachment=True,download_name='Output.zip')
             
-            error="Please upload a valid tex file"
+            error="Please upload a valid tex file. "
+            
         return render_template('upload.html',modules=modules,error=error)
     
     return render_template('upload.html',modules=modules)

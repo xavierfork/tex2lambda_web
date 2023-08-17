@@ -41,7 +41,7 @@ def upload_file():
                 #if there is another answer file take the input answer file in
                 answer=request.files['answerFile']
                 if answer:
-                        if nmatch.fnmatch(str(answer),pattern):
+                        if fnmatch.fnmatch(str(answer.filename),pattern):
                             app.logger.info('With answer')
                             answer.save(secure_filename(answer.filename))
                             runner(f.filename, modules[chosenindex],path,answer.filename)

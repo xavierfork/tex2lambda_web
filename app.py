@@ -47,6 +47,8 @@ def upload_file():
                             runner(f.filename, modules[chosenindex],path,answer.filename)
                         else:
                             error="Please input a valid tex file for answer"
+                            if f:
+                                 os.remove(f.filename)
                             return render_template('upload.html',modules=modules,error=error)
                     
                 else:

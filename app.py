@@ -11,9 +11,9 @@ app.config['SECRET_KEY'] = '962d09f8d1d111a49bc7afd4f8e6204cbf2d4e47d30bc3e4'
 #get the modules name
 modules=[
 
-            i.name.capitalize()
+            i.name
 
-            for i in pkgutil.iter_modules(tex2lambda.subjects.__path__)
+            for i in pkgutil.iter_modules(tex2lambda.filters.__path__)
 
             if i.name[0] != "_"
 
@@ -74,7 +74,6 @@ def upload_file():
             error="Please upload a valid tex file. "
             
         return render_template('upload.html',modules=modules,error=error)
-    
     return render_template('upload.html',modules=modules)
 	
 

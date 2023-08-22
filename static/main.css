@@ -16,7 +16,7 @@ body{
     padding: 0.8%;
     background-color: #0099c4;
     font-size:1.3vw;
-    transition:1s;
+    transition:0.5s;
 }
 
 
@@ -27,7 +27,7 @@ body{
     margin: auto;
     max-width: 55%;
     margin-top:8%;
-    transition:1s;
+    transition:0.5s;
     
 }
 
@@ -37,8 +37,9 @@ h2{
     font-family: 'Roboto', serif;
     font-weight: 600;
     font-size:2.1vw;
-    transition:1s;
+    transition:0.5s;
     color:#0582a5 ;
+    display:block
 }
 
 
@@ -55,7 +56,7 @@ input[type="file"]::file-selector-button {
     padding: 0.2em 0.4em;
     border-radius: 1em;
     background-color:#f2f6f7;
-    transition: 1s;
+    transition: 0.5s;
     font-size: 1.4vw;
     font-family: 'Roboto', serif;
     font-weight:200;
@@ -71,9 +72,20 @@ input[type="file"]::file-selector-button:hover {
     margin: auto;
     
 }
+.main_file{
+    text-align:center;
+   
+}
+.answer{
+    margin-left:2vw;
+}
+
+
 .select-module{
-    margin: auto;
-    max-width: 15%;
+   
+    display: flex;
+    justify-content: center;
+   
 }
 #module{
     margin-top:25%;
@@ -85,7 +97,7 @@ input[type="file"]::file-selector-button:hover {
     background-color:#f3f6f7;
     padding: 0.5em,1em;
 
-    transition:1s;
+    transition:0.5s;
     
 }
 
@@ -93,13 +105,13 @@ input[type="file"]::file-selector-button:hover {
     font-family: 'Roboto', serif;
     font-weight:200;
     font-size:1.7vw;
-    transition:1s ease-in-out;
+    transition:0.5s ease-in-out;
 }
 .chkLabel{
     font-family: 'Roboto', serif;
     font-weight:200;
     font-size:1.7vw;
-    transition:1s
+    transition:0.5s
 
 }
 
@@ -115,14 +127,41 @@ input[type=submit] {
     font-family: 'Roboto', serif;
     font-weight:200;
     cursor: pointer;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
   }
   
   input[type=submit]:hover {
     background-color: #0099c4;
   }
   
-
+.button{
+    vertical-align:middle;
+}
+  .round-button {
+    display:block;
+    width: 1.5vw ;
+    height:1.5vw;
+    line-height:1.5vw;
+    margin-left:1.5vw;
+    margin-top:3.2vw;
+    border: 0.2vw solid #f5f5f5;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: #83c8ea;
+    box-shadow: 0 0 3px gray;
+    font-family: 'Roboto', serif;
+    font-size:1.2vw;
+    font-weight:bold;
+    transition: 0.5s ease-in-out;
+   
+    
+    
+}
+.round-button:hover {
+    background: #0099c4;
+}
 
 
 

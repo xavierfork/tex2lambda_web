@@ -9,7 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 flask = "^2.3.2"
-tex2lambda = { git = "https://github.com/lambda-feedback/content-conversion"}
+tex2lambda = "^0.1.0"
 
 
 [build-system]

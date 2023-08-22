@@ -6,7 +6,7 @@
     enctype = "multipart/form-data">
     <div class="select-file">
         <div class="main_file" >
-            <input type = "file" name = "file" /><span><label class="chkLabel" for="chk"  >
+            <span><input type = "file" name = "file" /></span><span><label class="chkLabel" for="chk"  >
                 <input  type="checkbox" id="chk" name='check' value="check"/> Additional Answer File  </label></span>
         </div>
         
@@ -27,13 +27,14 @@
      </script>
     </div>
     <div class="module">
-        <label for="module"><h2>Modules</h2></label>
+        <h2>Modules</h2>
         <div class="select-module">
-        <select class="select" name="module" id="module">
+        <div><select class="select" name="module" id="module">
             {% for module in modules %}
                 <option value={{module}}>{{module}}</option>
                 {% endfor %}
-          </select>
+          </select></div>
+            <div class="button"><a href="https://lambda-feedback.github.io/tex2lambda/filters/index.html#" target="_blank" class="round-button">?</a></div>
         </div>
     </div>
     <br>

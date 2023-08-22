@@ -7,13 +7,14 @@
     <div class="select-file">
         <div class="main_file" >
             <span><input type = "file" name = "file" /></span><span><label class="chkLabel" for="chk"  >
-                <input  type="checkbox" id="chk" name='check' value="check"/> Additional Answer File  </label></span>
+                <input  type="checkbox" id="chk" name='check' value="check" title="Check me to upload separate answer file"/> Additional Answer File  </label></span>
         </div>
         
         <div class="answer" id="file-input" style="display:none;">
             <br>
             <p class="help-block"><strong>*Please upload your answer file here</strong></p>
-            <input type="file" name="answerFile">
+            <span><input type="file" name="answerFile" class="answerfile"></span>
+            <span><button class="resetbutton" type="button" onclick="resetFile()"> Reset Answer File </button></span>
         </div>
         <script>
             document.getElementById('chk').onchange = function(){
@@ -24,17 +25,26 @@
             //more js statements
             }
             }
+            function resetFile() {
+            const file =
+                document.querySelector('.answerfile');
+            if (file.value!=0){
+            file.value = '';}
+            else{
+            alert("There is no answer file to reset");
+            }
+        }
      </script>
     </div>
     <div class="module">
-        <h2>Modules</h2>
+        <h2>Filters</h2>
         <div class="select-module">
         <div><select class="select" name="module" id="module">
             {% for module in modules %}
-                <option value={{module}}>{{module}}</option>
+                <option title="{{modules[module]}}" value={{module}}>{{module}}</option>
                 {% endfor %}
           </select></div>
-            <div class="button"><a href="https://lambda-feedback.github.io/tex2lambda/filters/index.html#" target="_blank" class="round-button">?</a></div>
+            <div class="button"><a href="https://lambda-feedback.github.io/tex2lambda/filters/index.html#" title="Click me for more details on choosing filters" target="_blank" class="round-button">?</a></div>
         </div>
     </div>
     <br>

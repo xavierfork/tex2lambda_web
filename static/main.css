@@ -78,6 +78,7 @@ input[type="file"]::file-selector-button:hover {
 }
 .answer{
     margin-left:2vw;
+   
 }
 
 
@@ -164,8 +165,21 @@ input[type=submit] {
 }
 
 
+.resetbutton{
+    border: 0.5% solid black ;
+    padding: 0.2em 0.4em;
+    border-radius: 1em;
+    background-color:#f2f6f7;
+    transition: 0.5s;
+    font-size: 1.4vw;
+    font-family: 'Roboto', serif;
+    font-weight:200;
+}
 
-
+.resetbutton:hover{
+    background-color: #bdbdbd ;
+    border: 0.5% solid black;
+}
  
 
   
